@@ -22,5 +22,9 @@ ash-window = "0.12.0"
 raw-window-handle = "0.5.0"
 winit = { version = "0.28.1", features = ["mint"] }
 
+[target.'cfg(target_os = "macos")'.dependencies]
+#Vulkan
+ash-molten = { version = "0.14.0+1.1.10", features = ["pre-built"] }
+
 [build-dependencies]
 spirv-builder = "0.5.0"
