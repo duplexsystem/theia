@@ -1,0 +1,6 @@
+[workspace]
+members = [
+    "crates/lib/theia-common",
+    "crates/lib/theia-cpu",
+    "crates/lib/theia-gpu",
+]
