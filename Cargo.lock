@@ -330,6 +330,29 @@ dependencies = [
 ]
 
 [[package]]
+name = "crevice"
+version = "0.12.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "cb3faad1502613f2bbc3825b9e96d7d604eec2716c4723903d1ad31139d8f05c"
+dependencies = [
+ "bytemuck",
+ "crevice-derive",
+ "glam",
+ "mint",
+]
+
+[[package]]
+name = "crevice-derive"
+version = "0.10.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2320c07ceb3e491e2bd09ade90a91c29a42d9553f1bde60c945cb5c34958b26e"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "crunchy"
 version = "0.2.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -437,6 +460,15 @@ checksum = "12f597d56c1bd55a811a1be189459e8fad2bbc272616375602443bdfb37fa774"
 dependencies = [
  "bytemuck",
  "mint",
+ "num-traits",
+]
+
+[[package]]
+name = "glam-pbr"
+version = "0.1.0"
+source = "git+https://github.com/expenses/glam-pbr.git#5190bbc0697589dd99568f60c63b57ff7065a8eb"
+dependencies = [
+ "glam",
  "num-traits",
 ]
 
@@ -1259,6 +1291,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "spirv-extra-opt-passes"
+version = "0.1.0"
+source = "git+https://github.com/expenses/spirv-extra-opt-passes#0c33a7b347011a51eeb9992df4db2d2acc946ca6"
+dependencies = [
+ "log",
+ "num-traits",
+ "rspirv",
+]
+
+[[package]]
 name = "spirv-std"
 version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1335,7 +1377,9 @@ name = "theia-common"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
+ "crevice",
  "glam",
+ "glam-pbr",
  "half",
  "mint",
  "num-traits",
@@ -1349,7 +1393,9 @@ dependencies = [
  "ash-window",
  "ashpan",
  "bytemuck",
+ "crevice",
  "glam",
+ "glam-pbr",
  "gpu-allocator",
  "gpu-descriptor",
  "gpu-descriptor-ash",
@@ -1360,6 +1406,7 @@ dependencies = [
  "parking_lot",
  "raw-window-handle",
  "spirv-builder",
+ "spirv-extra-opt-passes",
  "tokio",
  "vk-sync-fork",
  "winit",
@@ -1370,7 +1417,9 @@ name = "theia-gpu"
 version = "0.1.0"
 dependencies = [
  "bytemuck",
+ "crevice",
  "glam",
+ "glam-pbr",
  "half",
  "mint",
  "num-traits",
